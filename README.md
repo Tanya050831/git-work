@@ -113,12 +113,26 @@ git clone https://github.com/teammate-user/project-repo.git
 cd project-repo
 ```
 
-### git clone
+### git merge
 ```bash
-cd ~/projects
-git clone https://github.com/teammate-user/project-repo.git
-cd project-repo
+git checkout main       # 先切回主分支
+git merge 分支a           # 把 分支a 分支的改动合并进来
 ```
 
-```
+## 典型工作流程示例（从 0 到上传）
+```bash
+# 1. 初始化项目
+git init
 
+# 2. 添加远程仓库
+git remote add origin https://github.com/xxx.git
+
+# 3. 添加代码到暂存区
+git add .
+
+# 4. 提交到本地仓库
+git commit -m "初始提交"
+
+# 5. 推送到远程仓库
+git push -u origin main
+```
